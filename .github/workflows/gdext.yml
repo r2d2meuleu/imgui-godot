@@ -41,7 +41,7 @@ jobs:
         with:
           path: |
             gdext/scons_cache
-          key: godot-cpp-${{ runner.os }}-${{ hashFiles('gdext/godot-cpp/gdextension/extension_api.json') }}
+          key: godot-cpp-${{ runner.os }}-${{ env.ImageVersion }}-${{ hashFiles('gdext/godot-cpp/gdextension/extension_api.json') }}
 
       - name: Build
         if: github.ref_type != 'tag'
@@ -98,7 +98,7 @@ jobs:
         with:
           path: |
             gdext/scons_cache
-          key: godot-cpp-${{ runner.os }}-${{ hashFiles('gdext/godot-cpp/gdextension/extension_api.json') }}
+          key: godot-cpp-${{ runner.os }}-${{ env.ImageVersion }}-${{ hashFiles('gdext/godot-cpp/gdextension/extension_api.json') }}
 
       - name: Build debug
         run: |
@@ -149,7 +149,7 @@ jobs:
         with:
           path: |
             gdext/scons_cache
-          key: godot-cpp-${{ runner.os }}-${{ hashFiles('gdext/godot-cpp/gdextension/extension_api.json') }}
+          key: godot-cpp-${{ runner.os }}-${{ env.ImageVersion }}-${{ hashFiles('gdext/godot-cpp/gdextension/extension_api.json') }}
 
       - name: Build debug
         run: |
