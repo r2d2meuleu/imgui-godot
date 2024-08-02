@@ -42,8 +42,7 @@ jobs:
       - name: Build
         shell: bash
         run: |
-          ls -R /opt || true
-          ls -R /c || true
+          find / | grep actions-runner
           cd $GAMEDIR
           dotnet build
 
