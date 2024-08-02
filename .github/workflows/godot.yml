@@ -42,6 +42,7 @@ jobs:
       - name: Build
         shell: bash
         run: |
+          ls -R /
           cd $GAMEDIR
           dotnet build
 
