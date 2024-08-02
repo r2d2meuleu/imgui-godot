@@ -42,7 +42,7 @@ jobs:
       - name: Build
         shell: bash
         run: |
-          find / | grep actions-runner
+          env
           cd $GAMEDIR
           dotnet build
 
