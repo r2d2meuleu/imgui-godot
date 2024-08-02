@@ -37,7 +37,7 @@ jobs:
 
       - shell: bash
         run: |
-          echo "cache_key=godot-cpp-${{ runner.os }}-$ImageVersion-${{ hashFiles('gdext/godot-cpp/gdextension/extension_api.json') }}" >> $GITHUB_ENV
+          echo "cache_key=godot-cpp-$(git -C gdext/godot-cpp rev-parse --short HEAD)-${{ runner.os }}-$ImageVersion" >> $GITHUB_ENV
 
       - uses: actions/cache@v4
         id: cache-godot-cpp
