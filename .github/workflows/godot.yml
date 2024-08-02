@@ -42,7 +42,9 @@ jobs:
       - name: Build
         shell: bash
         run: |
-          ls -R /
+          which cl || true
+          which cl.exe || true
+          ls -R /opt
           cd $GAMEDIR
           dotnet build
 
